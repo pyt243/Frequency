@@ -1,0 +1,36 @@
+var box = document.getElementsByClassName("box");
+  box[0].addEventListener("click",function(e){
+    console.log(this);
+    box[0].classList.add("b0");
+    box[1].classList.remove("b1");
+    box[2].classList.remove("b2");
+    box[3].classList.remove("b3");
+});
+box[1].addEventListener("click",function(e){
+  console.log(this);
+  box[1].classList.add("b1");
+  box[0].classList.remove("b0");
+  box[2].classList.remove("b2");
+  box[3].classList.remove("b3");
+});
+box[2].addEventListener("click",function(e){
+  console.log(this);
+  box[2].classList.add("b2");
+  box[1].classList.remove("b1");
+  box[0].classList.remove("b0");
+  box[3].classList.remove("b3");
+});
+box[3].addEventListener("click",function(e){
+  console.log(this);
+  box[3].classList.add("b3");
+  box[1].classList.remove("b1");
+  box[2].classList.remove("b2");
+  box[0].classList.remove("b0");
+});
+var stop = document.querySelector(".fb");
+stop.addEventListener("click",function(){
+  box[0].classList.remove("b0");
+  box[1].classList.remove("b1");
+  box[2].classList.remove("b2");
+  box[3].classList.remove("b3");
+})
